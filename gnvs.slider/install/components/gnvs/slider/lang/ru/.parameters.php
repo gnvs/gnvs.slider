@@ -42,3 +42,4 @@ $MESS = [
 	'POSITION_CENTER_TEXT' => 'По центру',
 	'POSITION_RIGHT_TEXT' => 'Справа',
 ];
+

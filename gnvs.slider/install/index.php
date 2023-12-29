@@ -35,6 +35,7 @@ class gnvs_slider extends CModule
         $this->MODULE_DESCRIPTION = Loc::getMessage('MODULE_DESCRIPTION');
     }
 
+    
     function DoInstall()
     {
     	global $APPLICATION;
@@ -80,6 +81,7 @@ class gnvs_slider extends CModule
         }
     }
 
+    // Создаю инфоблок для демо-данных
     function createModuleIblock()
     {
         global $DB;
@@ -111,6 +113,7 @@ class gnvs_slider extends CModule
             return;
         }
 
+        // Параметры
         $newIblockId = (new CIBlock())->Add([
             'ACTIVE'           => 'Y',
             'NAME'             => 'Gnvs slider',
@@ -138,6 +141,7 @@ class gnvs_slider extends CModule
             'PROPERTY_INDEX'   => 'N',
         ]);
 
+        // Отмена изменений
         if ($newIblockId === false) {
             $DB->Rollback();
             return;
@@ -167,6 +171,8 @@ class gnvs_slider extends CModule
         $DB->Commit();
     }
 
+
+    // Удаление инфоблока
     function deleteModuleIblock()
     {
         global $DB;
@@ -198,3 +204,5 @@ class gnvs_slider extends CModule
         $DB->Commit();
     }
 }
+
+

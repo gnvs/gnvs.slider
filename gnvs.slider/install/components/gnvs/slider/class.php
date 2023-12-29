@@ -24,6 +24,7 @@ class SimpleSliderComponent extends CBitrixComponent
 
     private const DEFAULT_LIMIT = 0;
 
+    
     /**
      * @param $component
      * @throws LoaderException

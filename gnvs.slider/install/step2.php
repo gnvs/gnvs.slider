@@ -29,7 +29,7 @@ $request = Context::getCurrent()->getRequest();
             </td>
         </tr>
         <tr>
-            <td>
+            <td><?// Координаты решения, типа заглушки ?>
                 <p><?=Loc::getMessage("GNVS_SLIDER_INSTRUCTION") ?> <a href="https://gnvs.ru/works/gnvs-slider/" target="_blank"><?=Loc::getMessage('GNVS_SLIDER_INSTRUCTION_LINK') ?></a></p>
                 <p><?=Loc::getMessage("GNVS_SLIDER_SUPPORT_TEXT") ?> <a href="mailto:gnvsxx@gmail.com">gnvsxx@gmail.com</a></p>
                 <?php if ($request->get('iblock') === 'Y') { ?>

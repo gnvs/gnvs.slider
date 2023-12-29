@@ -18,3 +18,4 @@ class ParametersNotFoundError extends BitrixError implements \Serializable
         return unserialize($data, ['allowed_classes' => [static::class]]);
     }
 }
+

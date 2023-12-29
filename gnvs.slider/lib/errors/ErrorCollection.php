@@ -17,3 +17,4 @@ class ErrorCollection extends BitrixErrorCollection implements \Serializable
         return unserialize($data, ['allowed_classes' => [static::class]]);
     }
 }
+

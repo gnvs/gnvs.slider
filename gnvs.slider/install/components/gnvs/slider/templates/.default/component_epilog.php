@@ -1,12 +1,7 @@
 <?php
-
-/**
- * @var $arParams array
-*/
-
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
-    die();
-}
+    die();}
+
 $arJSParams = [
 	'start' => 1,
 	'autoscroll' => (int)$arParams['AUTOSCROLL'],
@@ -14,7 +9,8 @@ $arJSParams = [
 	'showArrows' => (bool)$arParams['SHOW_ARROWS']
 ];
 ?>
-<script type="text/javascript">
+
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         new Slider(
             '<?= md5(implode('', $arParams))?>',
@@ -22,3 +18,4 @@ $arJSParams = [
         )
     })
 </script>
+

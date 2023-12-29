@@ -1,9 +1,4 @@
 <?php
-/**
- * @var $this CBitrixComponentTemplate
- * @var $arResult array It's a reference to $this->getComponent()->arResult
- * @var $arParams array
- */
 
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED === false) {
     return;
@@ -29,6 +24,7 @@ switch ($arParams['POSITION_TEXT']) {
         $positionText = 'top: 50%';
 }
 ?>
+
 <div class="slider" id="<?= md5(implode('', $arParams)) ?>"
      style="width: <?= $arParams['IMAGE_WIDTH'] ?>px">
 
