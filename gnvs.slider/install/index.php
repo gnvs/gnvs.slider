@@ -35,7 +35,6 @@ class gnvs_slider extends CModule
         $this->MODULE_DESCRIPTION = Loc::getMessage('MODULE_DESCRIPTION');
     }
 
-    
     function DoInstall()
     {
     	global $APPLICATION;
@@ -116,13 +115,13 @@ class gnvs_slider extends CModule
         // Параметры
         $newIblockId = (new CIBlock())->Add([
             'ACTIVE'           => 'Y',
-            'NAME'             => 'Gnvs slider',
-            'CODE'             => 'gnvs.slider',
-        	'API_CODE'		   => 'gnvsSlider',
+            'NAME'             => 'Слайдер',
+            'CODE'             => 'gnvs_slider',
+        	'API_CODE'		   => 'slider',
             'LIST_PAGE_URL'    => '',
             'DETAIL_PAGE_URL'  => '',
             'SECTION_PAGE_URL' => '',
-            'IBLOCK_TYPE_ID'   => 'gnvsslider',
+            'IBLOCK_TYPE_ID'   => 'dop_content',
             'LID'              => ['s1'],
             'SORT'             => 500,
             'GROUP_ID'         => ['2' => 'R'],
@@ -131,7 +130,7 @@ class gnvs_slider extends CModule
             'WORKFLOW'         => 'N',
             'INDEX_ELEMENT'    => 'N',
             'INDEX_SECTION'    => 'N',
-            'XML_ID'           => 'gnvs.slider',
+            'XML_ID'           => 'slider',
             'ELEMENTS_NAME'    => Loc::getMessage('IBLOCK_ELEMENTS_NAME'),
             'ELEMENT_NAME'     => Loc::getMessage('IBLOCK_ELEMENT_NAME'),
             'SECTION_NAME'     => Loc::getMessage('IBLOCK_SECTION_NAME'),
@@ -141,7 +140,7 @@ class gnvs_slider extends CModule
             'PROPERTY_INDEX'   => 'N',
         ]);
 
-        // Отмена изменений
+        // Отмена
         if ($newIblockId === false) {
             $DB->Rollback();
             return;
